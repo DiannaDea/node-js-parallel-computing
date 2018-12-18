@@ -1,6 +1,6 @@
 const { Console } = require('console');
 const { getIndexesFibNumbers, fib, printResult } = require('./shared');
-const console = new Console({ stdout: process.stdout, stderr: process.stderr });
+const console = new Console(process.stdout, process.stderr);
 
 function main() {
   const fibIndexes = getIndexesFibNumbers();

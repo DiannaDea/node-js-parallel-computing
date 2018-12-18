@@ -4,7 +4,7 @@ const { getIndexesFibNumbers, fib, printResultWithWorkers } = require('./shared'
 
 const NUMBER_OF_WORKERS = 4;
 const zone = napa.zone.create('zone', { workers: NUMBER_OF_WORKERS} );
-const console = new Console({ stdout: process.stdout, stderr: process.stderr });
+const console = new Console(process.stdout, process.stderr);
 
 console.time = function(label) {
   this._times[label] = Date.now();
